@@ -1,0 +1,50 @@
+{
+    "regime": "memory-bound",
+    "arithmetic_intensity": 0.10416666666666667,
+    "hardware": {
+        "cpu": "Apple M3 Pro",
+        "architecture": "arm64",
+        "physical_cores": 11,
+        "logical_cores": 8,
+        "peak_memory_bandwidth_gb_s": 150.0,
+        "cache_line_bytes": 128
+    },
+    "cache_hierarchy": {
+        "L1D_E_core_bytes": 65536,
+        "L1I_E_core_bytes": 131072,
+        "L2_E_core_bytes": 4194304,
+        "L1D_P_core_bytes": 131072,
+        "L1I_P_core_bytes": 196608,
+        "L2_P_core_bytes": 16777216,
+        "L3_bytes": null,
+        "note": "L3 was not established by the available Milestone 0 measurements."
+    },
+    "kernel": {
+        "name": "2D five-point stencil",
+        "matrix_dimension": 2048,
+        "dtype": "float64",
+        "flops_per_cell": 5,
+        "work_cells": 4186116,
+        "total_flops": 20930580,
+        "naive_bytes_per_cell": 48,
+        "ideal_bytes_per_cell": 16,
+        "naive_estimated_bytes": 200933568,
+        "ideal_estimated_bytes": 66977856
+    },
+    "roofline": {
+        "naive_arithmetic_intensity": 0.10416666666666667,
+        "ideal_cache_reuse_arithmetic_intensity": 0.3125,
+        "peak_memory_bandwidth_gb_s": 150.0,
+        "modeled_naive_bandwidth_gb_s": 18.396719351877532,
+        "modeled_ideal_bandwidth_gb_s": 6.132239783959178,
+        "peak_fp64_flops": null,
+        "ridge_point_flops_per_byte": null,
+        "classification": "Provisional: likely memory-bandwidth-sensitive",
+        "reason": "The stencil has low arithmetic intensity. Neighboring input values can be reused through the cache, so the naive 48-byte model and ideal 16-byte model represent different traffic assumptions. Actual DRAM traffic requires hardware performance counters. Exact roofline classification requires peak FP64 compute throughput and measured DRAM bandwidth."
+    },
+    "amdahl": {
+        "effective_serial_fraction": 0.6529277503313355,
+        "maximum_speedup": 1.531563024381394,
+        "interpretation": "Available only when all measured effective serial fractions are within [0, 1]."
+    }
+}
