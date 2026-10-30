@@ -1,0 +1,32 @@
+{
+    "student_id": "230103331",
+    "cpu_model": "Apple M2",
+    "physical_cores": 8,
+    "logical_threads": 8,
+    "cache_line_bytes": 64,
+    "cpu": {
+        "cpu_model": "Apple M2",
+        "architecture": "arm64",
+        "physical_cores": 8,
+        "logical_cores": 8,
+        "base_frequency_mhz": null,
+        "cache": {
+            "l1_data_bytes": 65536,
+            "l1_instruction_bytes": 131072,
+            "l2_bytes": 4194304,
+            "l3_bytes": null,
+            "cache_line_bytes": 128
+        }
+    },
+    "operating_system": {
+        "system": "Darwin",
+        "release": "25.5.0",
+        "version": "Darwin Kernel Version 25.5.0: Mon Apr 27 20:40:51 PDT 2026; root:xnu-12377.121.6~2/RELEASE_ARM64_T8112",
+        "machine": "arm64"
+    },
+    "python": {
+        "implementation": "CPython",
+        "version": "3.14.0",
+        "full_version": "3.14.0 (v3.14.0:ebf955df7a8, Oct  7 2025, 08:20:14) [Clang 16.0.0 (clang-1600.0.26.6)]"
+    }
+}
